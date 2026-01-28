@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; /* WhatsApp uses Roboto on Android */
+}
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.app-container {
+    width: 380px;
+    height: 750px;
+    background: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+header {
+    background-color: #008069;
+    color: white;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 15px 5px 15px;
+}
+
+.logo { font-size: 20px; font-weight: 500; }
+
+.top-icons i { margin-left: 18px; font-size: 16px; cursor: pointer; }
+
+.tabs { display: flex; align-items: center; }
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 15px 0;
+    color: #b1d9d2;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.tab.active {
+    color: white;
+    border-bottom: 3px solid white;
+}
+
+.tab-icon { width: 45px; color: #b1d9d2; text-align: center; }
+
+.badge {
+    background: white;
+    color: #008069;
+    padding: 1px 5px;
+    border-radius: 10px;
+    font-size: 10px;
+    margin-left: 4px;
+}
+
+/* Chat Items */
+.chat-list { flex: 1; overflow-y: auto; }
+
+.chat-item {
+    display: flex;
+    padding: 12px 15px;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.status-ring { border: 2px solid #25d366; padding: 1px; }
+
+.chat-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-row { display: flex; justify-content: space-between; margin-bottom: 3px; }
+
+.name { font-weight: 600; font-size: 16px; color: #111b21; }
+
+.time { font-size: 11px; color: #667781; }
+
+.unread-time { color: #25d366; font-weight: 600; }
+
+.message {
+    font-size: 14px;
+    color: #667781;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.read { color: #53bdeb; font-size: 12px; }
+
+.unread-count {
+    background-color: #25d366;
+    color: white;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.pin { color: #8696a0; font-size: 12px; transform: rotate(45deg); }
+
+/* Clock icon over Jane Whitman's DP */
+.img-container { position: relative; }
+.timer-icon {
+    position: absolute;
+    bottom: 0;
+    right: 12px;
+    background: white;
+    border-radius: 50%;
+    font-size: 12px;
+    color: #8696a0;
+}
+
+/* FAB */
+.fab {
+    position: absolute;
+    bottom: 25px;
+    right: 20px;
+    background-color: #00a884;
+    width: 55px;
+    height: 55px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #111b21; /* WhatsApp fab icon is actually dark on green sometimes */
+    font-size: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
